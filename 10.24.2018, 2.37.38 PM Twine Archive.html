@@ -1,0 +1,226 @@
+<tw-storydata name="Descent" startnode="39" creator="Twine" creator-version="2.2.1" ifid="3E439F7A-E5B6-43BC-9D08-641BB9281340" zoom="0.6" format="Harlowe" format-version="2.1.0" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">
+
+
+
+
+
+
+
+
+
+
+</style><script role="script" id="twine-user-script" type="text/twine-javascript">
+
+
+
+
+
+</script><tw-passagedata pid="1" name="Wake up" tags="" position="600,0" size="100,100">(set: $key2 to false)
+&#39;&#39;You awaken from a deep slumber. You look around and it seems like you are  in your bedroom. There is a window letting in a small amount of light into the room &#39;&#39;
+
+[[Get up]]
+
+&lt;audio src=&quot;https://seducezeusounds.yolasite.com/resources/tvStaticLow.mp3&quot; autoplay loop&gt;</tw-passagedata><tw-passagedata pid="2" name="Get up" tags="" position="726,29" size="100,100">&quot;You get up from the bed.&quot;
+[[Look around]]
+
+
+
+
+&lt;audio src=&quot;https://seducezeusounds.yolasite.com/resources/tvStaticLow.mp3&quot; autoplay loop&gt;</tw-passagedata><tw-passagedata pid="3" name="Look around" tags="" position="631,156" size="100,100">&quot;This room looks a lot like the room I first woke up from- Except the entire orientation of the room is flipped. The objects are the exact same except for a TV in front of the room and a cat. Likewise to the original room-there is a bed and another door at the end of the room&quot;
+
+
+[[Move towards the door]] 
+[[Go pet the cat]]
+[[Look at the TV]]
+[[Inspect window]]
+[[Inspect house plants]]
+[[Inspect desk]]
+[[Inspect carpet]]
+
+(if:$door is 1)[ //I think I&#39;m finally out of my dream state... maybe I should try the door again//]
+(elseif:$wake1 is 1)[(link-goto:&quot;Pinch yourself&quot;)(&quot;Maybe I should just pinch myself to make sure I&#39;m really awake&quot;)]
+(else:)[//I can&#39;t quite remember where I am. It seems like I&#39;m in my room but something doesn&#39;t feel right...//]
+
+
+&lt;audio src=&quot;https://seducezeusounds.yolasite.com/resources/tvStaticLow.mp3&quot; autoplay loop&gt;</tw-passagedata><tw-passagedata pid="4" name="Go pet the cat" tags="" position="576,541" size="100,100">&quot;Friendly Feline Creature, A Domestic Short Haired  Chimera Cat that&#39;s black and white. She has a collar with a locket on it.&quot;
+[[Look closer at the locket]]
+
+&lt;/style&gt;
+&lt;img src=&quot;https://cdn.discordapp.com/attachments/499034573552877568/503093821387833354/Untitled_Artwork_13.png&quot; width=&quot;50%&quot; height=&quot;50%&quot;&gt;
+&lt;/div&gt;
+
+&lt;audio src=&quot;https://seducezeusounds.yolasite.com/resources/catMeow.mp3&quot; autoplay&gt;
+
+&lt;audio src=&quot;https://seducezeusounds.yolasite.com/resources/tvStaticLow.mp3&quot; autoplay loop&gt;</tw-passagedata><tw-passagedata pid="5" name="Look at the TV" tags="" position="98,605" size="100,100">&quot;You see a flickering static screen. There is nothing on it.&quot; 
+//Maybe try to look for a remote or adjust the antenna?//
+
+
+(if:$tv is 1)[(link-goto: &quot;Try to move the antenna&quot; )]
+
+(else:)[ [[Look around]] ]
+
+&lt;audio src=&quot;https://seducezeusounds.yolasite.com/resources/tvStaticLoud.mp3&quot; autoplay loop&gt;</tw-passagedata><tw-passagedata pid="6" name="Look closer at the locket" tags="" position="478,688" size="100,100">&quot;The locket reads * Ginger* It looks like it needs a small key to open it&quot;
+
+(if:$key is 1)[(link-goto:&quot;You could open the locket&quot;)]
+
+(else:)[ [[Look around]] ]
+
+&lt;/style&gt;
+&lt;img src=&quot;https://cdn.discordapp.com/attachments/499034573552877568/503099669690449921/Untitled_Artwork_14.png&quot; width=&quot;50%&quot; height=&quot;50%&quot;&gt;
+&lt;/div&gt;
+
+&lt;audio src=&quot;https://seducezeusounds.yolasite.com/resources/tvStaticLow.mp3&quot; autoplay loop&gt;</tw-passagedata><tw-passagedata pid="7" name="Move towards the door" tags="" position="1176,317" size="100,100">&quot;I wonder what could be behind this door, perhaps it leads to the rest of the house ?&quot;
+
+
+
+[[Open the Door]]
+
+&lt;audio src=&quot;https://seducezeusounds.yolasite.com/resources/walkingOnWood.mp3&quot; autoplay&gt;
+
+&lt;audio src=&quot;https://seducezeusounds.yolasite.com/resources/tvStaticLow.mp3&quot; autoplay loop&gt;
+</tw-passagedata><tw-passagedata pid="8" name="Open the Door" tags="" position="1695,172" size="100,100">&quot;You open the door and you walk into another bedroom&quot;
+
+[[Walk down hall]]
+
+&lt;audio src=&quot;https://seducezeusounds.yolasite.com/resources/openDoor.mp3&quot; autoplay&gt;
+</tw-passagedata><tw-passagedata pid="9" name="You could open the locket" tags="" position="624,872.3333333333334" size="100,100">&quot;You jingle the key in and it pops open, there lies a small piece of parchment paper.&quot;
+
+[[Read parchment paper]]
+
+&lt;/style&gt;
+&lt;img src=&quot;https://cdn.discordapp.com/attachments/499034573552877568/503108064019218444/Untitled_Artwork_15.png&quot; width=&quot;50%&quot; height=&quot;50%&quot;&gt;
+&lt;/div&gt;
+
+&lt;audio src=&quot;https://seducezeusounds.yolasite.com/resources/locket.mp3&quot; autoplay&gt;
+
+&lt;audio src=&quot;https://seducezeusounds.yolasite.com/resources/tvStaticLow.mp3&quot; autoplay loop&gt;</tw-passagedata><tw-passagedata pid="10" name="Read parchment paper" tags="" position="518,1088" size="100,100">//Wake up, you&#39;re in a dream.//
+
+[[Wake up from the dream]]
+
+&lt;audio src=&quot;https://seducezeusounds.yolasite.com/resources/tvStaticLow.mp3&quot; autoplay loop&gt;</tw-passagedata><tw-passagedata pid="11" name="Pinch yourself" tags="" position="262,284" size="100,100">//You pinch yourself// &quot;This is strange, you&#39;re in a bed again. You were in a dream. I guess the room I first woke up in was my mind&#39;s projection of the room. I should be in my real bedroom now but I should check the TV just to make sure.&quot;
+
+(set:$tv to 0)
+(put: &quot;Look at the TV&quot; into $tv)
+(set:$tv to +1)
+
+[[Look around]]
+
+&lt;audio src=&quot;https://seducezeusounds.yolasite.com/resources/tvStaticLow.mp3&quot; autoplay loop&gt;</tw-passagedata><tw-passagedata pid="12" name="Try to move the antenna" tags="" position="103,734" size="100,100">&quot;You see a fuzzy image, there are some faint symbols, it looks like the weather chanel, maybe you need to keep moving the antenna?&quot;
+
+[[Move the antenna]]
+
+&lt;audio src=&quot;https://seducezeusounds.yolasite.com/resources/tvStaticLoud.mp3&quot; autoplay loop&gt;
+</tw-passagedata><tw-passagedata pid="13" name="Move the antenna" tags="" position="101,858.3333333333334" size="100,100">&quot;You finally see a sharper image of the TV screen. It is indeed a weather channel. Maybe you can try and find out where you are?&quot;
+
+[[Look closer]]
+
+
+&lt;audio src=&quot;https://seducezeusounds.yolasite.com/resources/movingAntenna.mp3&quot; autoplay &gt;</tw-passagedata><tw-passagedata pid="14" name="Look closer" tags="" position="107,975.3333333333334" size="100,100">&quot;The screen asks for a password&quot;
+
+[[Look around]]
+(set:$door to 0)
+(put: &quot;Move towards the door&quot; into $door)
+(set:$door to +1)
+(set: $sol to &quot;Sansevieria&quot;)
+(set: $pwd to (prompt: &quot;Password &quot;, &quot;&quot;))
+(if: $pwd is $sol)[Correct Password]
+(else:)[(go-to: &quot;Look closer&quot;) Incorrect Password. Please Re-Enter]</tw-passagedata><tw-passagedata pid="15" name="Walk down hall" tags="" position="1703,396" size="100,100">&quot;This hall has lights on both side of the hallway and a light blue wallpaper with roses on the border of the whie trim on the ceiling. Your memory is starting to come back to you, you&#39;re home.The hallway comes to a dead end and splits into two ways, Do you walk towards the right or left?&quot;
+
+[[Go right]]
+[[Go left]]
+[[Inspect hallway]]
+
+&lt;audio src=&quot;https://seducezeusounds.yolasite.com/resources/walkingOnWood.mp3&quot; autoplay&gt;
+</tw-passagedata><tw-passagedata pid="16" name="Go right" tags="" position="1206,530" size="100,100">&quot;It seems like youre in the kitchen&quot;
+
+[[Inspect kitchen door]]
+[[Inspect library door]]</tw-passagedata><tw-passagedata pid="17" name="Go left" tags="" position="2211,480" size="100,100">It appears you&#39;ve reached the bathroom.
+
+[[Go into bathroom]]</tw-passagedata><tw-passagedata pid="18" name="Inspect kitchen door" tags="" position="1283,803" size="100,100">Seems locked.
+
+&lt;audio src=&quot;https://seducezeusounds.yolasite.com/resources/lockedDoor.mp3&quot; autoplay&gt;
+</tw-passagedata><tw-passagedata pid="19" name="Inspect window" tags="" position="97,1245" size="100,100">&lt;audio src=&quot;https://seducezeusounds.yolasite.com/resources/tvStaticLow.mp3&quot; autoplay loop&gt;</tw-passagedata><tw-passagedata pid="20" name="Inspect house plants" tags="" position="714,611" size="100,100">&lt;audio src=&quot;https://seducezeusounds.yolasite.com/resources/tvStaticLow.mp3&quot; autoplay loop&gt;</tw-passagedata><tw-passagedata pid="21" name="Inspect desk" tags="" position="963,602" size="100,100">You look at the desk and you see a water cup. There is a drawer under the desk.
+
+[[Take water cup]]
+[[Inspect under desk drawer]]
+
+&lt;audio src=&quot;https://seducezeusounds.yolasite.com/resources/tvStaticLow.mp3&quot; autoplay loop&gt;</tw-passagedata><tw-passagedata pid="22" name="Take water cup" tags="" position="770,857" size="100,100">
+&lt;audio src=&quot;https://seducezeusounds.yolasite.com/resources/pickUpCup.mp3&quot; autoplay&gt;
+
+&lt;audio src=&quot;https://seducezeusounds.yolasite.com/resources/tvStaticLow.mp3&quot; autoplay loop&gt;</tw-passagedata><tw-passagedata pid="23" name="Inspect hallway" tags="" position="1703,613" size="100,100">You see a painting.
+
+[[Inspect painting]]</tw-passagedata><tw-passagedata pid="24" name="Inspect painting" tags="" position="1511,809" size="100,100">You look at the painting in front of you. It looks like a library. 
+
+The room is dark and has a couple of statues in the middle.
+
+You don&#39;t get a good feeling by looking at it.
+You [[turn-&gt;Walk down hall]] away.</tw-passagedata><tw-passagedata pid="25" name="Go into bathroom" tags="" position="2457,691.3333333333334" size="100,100">You walk into the bathroom and you see a familiar looking place. 
+
+&quot;Isn&#39;t this my bathroom?&quot; You think.
+
+To your right you see a [[sink-&gt;Sink]] and a [[mirror-&gt;Mirror]].
+
+In front of you is the [[toilet-&gt;Toilet]].
+
+To your left you see a [[shower-&gt;Shower]].
+
+&lt;audio src=&quot;https://seducezeusounds.yolasite.com/resources/openDoor.mp3&quot; autoplay&gt;
+</tw-passagedata><tw-passagedata pid="26" name="Inspect library door" tags="" position="1089,799" size="100,100">You walk in front of the library door.
+
+(if: $key2 is false)[The door is locked. Maybe there&#39;s a key somewhere.]
+
+(if: $key2 is true)[You open the door and enter the [[library-&gt;Library]].]
+
+&lt;audio src=&quot;https://seducezeusounds.yolasite.com/resources/openDoor.mp3&quot; autoplay&gt;
+</tw-passagedata><tw-passagedata pid="27" name="Shower" tags="" position="2768,1003" size="100,100">You open the shower curtain and you notice the shower is dry. It hasn&#39;t been used for a while.
+
+You notice something shiny by the drain.
+
+You reach out to //[[inspect-&gt;Inspect]]// it.
+
+&lt;audio src=&quot;https://seducezeusounds.yolasite.com/resources/showerCurtain.mp3&quot; autoplay&gt;</tw-passagedata><tw-passagedata pid="28" name="Inspect" tags="" position="2840,1198" size="100,100">You reach out and grab the shiny object.
+
+&#39;&#39;It&#39;s a metal chip in a star shape. There&#39;s a small crack in the middle.&#39;&#39;
+
+(set: $chip to true)
+
+&quot;Hmm, I wonder what this is for.&quot;</tw-passagedata><tw-passagedata pid="29" name="Sink" tags="" position="2057,1044" size="100,100">You turn on the faucet and wash your face.
+
+You remember the plant in your room is about to die.
+
+&quot;I should water it.&quot;
+
+You [[grab the water]] can from underneath the sink.
+
+
+&lt;audio src=&quot;https://seducezeusounds.yolasite.com/resources/waterFaucet.mp3&quot; autoplay&gt;</tw-passagedata><tw-passagedata pid="30" name="Mirror" tags="" position="2287,1097" size="100,100">You look in the mirror. The thing you see surprises you and you take a few steps back.
+
+&quot;What the fuck!&quot;
+
+In the mirror, you see the reflection of the room you got up in.
+
+You look [[away-&gt;Go into bathroom]]. </tw-passagedata><tw-passagedata pid="31" name="Toilet" tags="" position="2437,1097" size="100,100">You look at the toilet.
+
+You look [[away-&gt;Go into bathroom]].</tw-passagedata><tw-passagedata pid="32" name="Library" tags="" position="1089,947.3333333333334" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="33" name="Fill it up" tags="" position="2047,1370" size="100,100">As you fill up the can, you notice something odd with the [[Mirror]] 
+
+
+&lt;audio src=&quot;https://seducezeusounds.yolasite.com/resources/pouringWater.mp3&quot; autoplay&gt;</tw-passagedata><tw-passagedata pid="34" name="grab the water" tags="" position="2053,1205" size="100,100">[[Fill it up]] 
+
+
+&lt;audio src=&quot;https://seducezeusounds.yolasite.com/resources/pickUpCup.mp3&quot; autoplay&gt;</tw-passagedata><tw-passagedata pid="35" name="Inspect under desk drawer" tags="" position="983,857.3333333333334" size="100,100">(if: $flashlight is 0)[There is a flashlight in the drawer.]
+(if: $flashlight is &gt;= 1)[It is an empty drawer.]
+
+(if: $flashlight is 0)[(link-goto: &quot;Take the flashlight&quot; )]
+[[Look around]]</tw-passagedata><tw-passagedata pid="36" name="Take the flashlight" tags="" position="873,1004" size="100,100">(set: $flashlight to 0)[[Look around]]
+(set: $flashlight to 1)</tw-passagedata><tw-passagedata pid="37" name="Inspect carpet" tags="" position="369,944" size="100,100">&quot;Look like some thing is under the carpet. There are two long slits and a recess set into the floor.&quot;
+
+(if: $flashlight is 1)[&quot;The recess matches the shape of the flashlight! But what does it do? ]
+
+(if: $chip is true)[&quot;Looks like I can put the chip into the slits! But what does it do?&quot;]
+
+(if: $flashlight is 1 and $chip is true)[&quot;I carefully insert the chip into the slits.The light from the flashlight shone the shadow of the chip on the bookshelf in front of the wall. There was a ray of light shining through a small crack in the middle of the chip on the book on the shelf. Maybe there is something in //[[that book-&gt;Inspect the book]]//.&quot;]
+
+&quot;Maybe I should //[[come back-&gt;Look around]]// later...&quot;</tw-passagedata><tw-passagedata pid="38" name="Inspect the book" tags="" position="250,1276" size="100,100">&quot;I opened the book, there is a shiny key folded in the middle of the book &quot;
+(set: $key2 to true)
+[[Look around]]</tw-passagedata><tw-passagedata pid="39" name="Title Screen" tags="" position="185,30.333333333333332" size="100,100">[[Wake up]] </tw-passagedata></tw-storydata>
+
