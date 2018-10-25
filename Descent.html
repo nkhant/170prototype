@@ -115,7 +115,9 @@ var saveAs=saveAs||navigator.msSaveBlob&&navigator.msSaveBlob.bind(navigator)||f
 
 
 
+
 </style><script role="script" id="twine-user-script" type="text/twine-javascript">
+
 
 
 
@@ -127,6 +129,7 @@ var saveAs=saveAs||navigator.msSaveBlob&&navigator.msSaveBlob.bind(navigator)||f
 &lt;&lt;audio titleMusic stop&gt;&gt;
 &lt;&lt;audio tvStaticLow play&gt;&gt;
 
+&lt;img src=&quot;images/rooms/Bedroom_Bed.png&quot; alt=&quot;bedroom&quot; style= &quot;width:558px;height:376px;&quot; align=&quot;top&quot; /&gt;
 
 
 &#39;&#39;You awaken from a deep slumber. You look around and it seems like you are  in your bedroom. There is a window letting in a small amount of light into the room &#39;&#39;
@@ -151,7 +154,11 @@ var saveAs=saveAs||navigator.msSaveBlob&&navigator.msSaveBlob.bind(navigator)||f
 
 
 
-</tw-passagedata><tw-passagedata pid="3" name="Look around" tags="" position="631,156" size="100,100">&#39;&#39;This room seems like a flipped version of the room in my dream. The objects are the exact same except for a TV in front of the room and a cat.There is a cat right next to the door in front of me. There is a TV facing your bed. There is a window letting light pour onto your desk. The light is probably good for your plant.&#39;&#39;
+</tw-passagedata><tw-passagedata pid="3" name="Look around" tags="" position="631,156" size="100,100">&lt;&lt;audio tvStaticLoud stop&gt;&gt;
+
+&lt;img src=&quot;images/rooms/Bedroom_FullView.png&quot; alt=&quot;bedroom&quot; style= &quot;width:558px;height:376px;&quot; align=&quot;top&quot; /&gt;
+
+&#39;&#39;This room seems like a flipped version of the room in my dream. The objects are the exact same except for a TV in front of the room and a cat.There is a cat right next to the door in front of me. There is a TV facing your bed. There is a window letting light pour onto your desk. The light is probably good for your plant.&#39;&#39;
 
 
 [[Move towards the door]] 
@@ -162,16 +169,11 @@ var saveAs=saveAs||navigator.msSaveBlob&&navigator.msSaveBlob.bind(navigator)||f
 [[Inspect desk]]
 [[Inspect carpet]]
 
-
 /*
 (if:$door is 1)[ //I think I&#39;m finally out of my dream state... maybe I should try the door again//]
 (elseif:$wake1 is 1)[(link-goto:&quot;Pinch yourself&quot;)(&quot;Maybe I should just pinch myself to make sure I&#39;m really awake&quot;)]
 (else:)[//I can&#39;t quite remember where I am. It seems like I&#39;m in my room but something doesn&#39;t feel right...//]
 */
-
-
-
-
 &lt;!-- ----------Tasks/States--------------------- --&gt;
 
 &lt;&lt;if $water eq 0 and  $waterPlants == &quot;false&quot; &gt;&gt;
@@ -185,7 +187,7 @@ var saveAs=saveAs||navigator.msSaveBlob&&navigator.msSaveBlob.bind(navigator)||f
 &lt;&lt;/if&gt;&gt;
 
 
-</tw-passagedata><tw-passagedata pid="4" name="Go pet the cat" tags="" position="509.66666666666663,692.6666666666666" size="100,100">&lt;&lt;audio catMeow play&gt;&gt;
+</tw-passagedata><tw-passagedata pid="4" name="Go pet the cat" tags="" position="509,692" size="100,100">&lt;&lt;audio catMeow play&gt;&gt;
 
 &quot;Friendly Feline Creature, A Domestic Short Haired  Chimera Cat that&#39;s black and white. She has a collar with a locket on it.&quot;
 [[Look closer at the locket]]
@@ -206,7 +208,7 @@ var saveAs=saveAs||navigator.msSaveBlob&&navigator.msSaveBlob.bind(navigator)||f
 
 [[Try to move the antenna]]
 [[Look around]] 
-</tw-passagedata><tw-passagedata pid="6" name="Look closer at the locket" tags="" position="505.66666666666663,816.3333333333333" size="100,100">&quot;The locket reads * Ginger* It looks like it needs a small key to open it&quot;
+</tw-passagedata><tw-passagedata pid="6" name="Look closer at the locket" tags="" position="505,816" size="100,100">&quot;The locket reads * Ginger* It looks like it needs a small key to open it&quot;
 
 /*
 (if:$key is 1)[(link-goto:&quot;You could open the locket&quot;)]
@@ -244,7 +246,7 @@ var saveAs=saveAs||navigator.msSaveBlob&&navigator.msSaveBlob.bind(navigator)||f
 [[Walk down hall]]
 [[Move towards the door]] 
 
-</tw-passagedata><tw-passagedata pid="9" name="You could open the locket" tags="" position="515.6666666666666,945.6666666666666" size="100,100">&lt;&lt;audio locket play&gt;&gt;
+</tw-passagedata><tw-passagedata pid="9" name="You could open the locket" tags="" position="515,945" size="100,100">&lt;&lt;audio locket play&gt;&gt;
 
 &quot;You jingle the key in and it pops open, there lies a small piece of parchment paper.&quot;
 
@@ -263,7 +265,8 @@ var saveAs=saveAs||navigator.msSaveBlob&&navigator.msSaveBlob.bind(navigator)||f
 </tw-passagedata><tw-passagedata pid="11" name="Pinch yourself" tags="" position="262,284" size="100,100">//You pinch yourself// &quot;This is strange, you&#39;re in a bed again. You were in a dream. I guess the room I first woke up in was my mind&#39;s projection of the room. I should be in my real bedroom now but I should check the TV just to make sure.&quot;
 
 &lt;&lt;set $tv = 0&gt;&gt;
-&lt;&lt;put &quot;Look at the TV&quot; into $tv&gt;&gt;
+/*&lt;&lt;put &quot;Look at the TV&quot; into $tv&gt;&gt; */
+&lt;&lt;set $tv to &quot;Look at the TV&quot;&gt;&gt;
 &lt;&lt;set $tv += 1&gt;&gt;
 
 [[Look around]]
@@ -325,25 +328,25 @@ Enter the password:
 &lt;&lt;/if&gt;&gt;
 
 
-</tw-passagedata><tw-passagedata pid="16" name="Go right" tags="" position="1497.6666666666667,746.3333333333334" size="100,100">&lt;&lt;audio walkingOnWood stop&gt;&gt;
+</tw-passagedata><tw-passagedata pid="16" name="Go right" tags="" position="1497,746" size="100,100">&lt;&lt;audio walkingOnWood stop&gt;&gt;
 
 &quot;It seems like youre in the kitchen&quot;
 
 [[Inspect kitchen door]]
 [[Inspect library door]]</tw-passagedata><tw-passagedata pid="17" name="Go left" tags="" position="2211,480" size="100,100">It appears you&#39;ve reached the bathroom.
 
-[[Go into bathroom]]</tw-passagedata><tw-passagedata pid="18" name="Inspect kitchen door" tags="" position="1574.6666666666667,1108" size="100,100">&lt;&lt;audio lockedDoor play&gt;&gt;
+[[Go into bathroom]]</tw-passagedata><tw-passagedata pid="18" name="Inspect kitchen door" tags="" position="1574,1108" size="100,100">&lt;&lt;audio lockedDoor play&gt;&gt;
 
 Seems locked.
 
-[[Walk down hall]]
+[[Back-&gt;Go right]] 
 
 
 </tw-passagedata><tw-passagedata pid="19" name="Inspect window" tags="" position="137,1260" size="100,100">&#39;&#39;Wait a minute. This is actually a mirror thats reflecting light.&#39;&#39;
 
 //I don&#39;t think my bedroom light is powerful enough to reflect that much light though//
 
-[[Look around]]</tw-passagedata><tw-passagedata pid="20" name="Inspect house plants" tags="" position="685.6666666666666,637" size="100,100">
+[[Look around]]</tw-passagedata><tw-passagedata pid="20" name="Inspect house plants" tags="" position="685,637" size="100,100">
 &#39;&#39;You take a quick glance at the houseplant and it looks a bit wilted. You should probably give it some water.&#39;&#39;
 
 [[Look around]]
@@ -363,7 +366,9 @@ Seems locked.
 [[Water plants]]
 &lt;&lt;/if&gt;&gt;
 
-</tw-passagedata><tw-passagedata pid="21" name="Inspect desk" tags="" position="1024.6666666666667,637" size="100,100"> There is a glowing light coming in from your window.There seems to be a drawer under the desk.&lt;&lt;if !$pickUpCup &gt;&gt;There is a clean water cup next to your plant.&lt;&lt;/if&gt;&gt;&lt;&lt;if !$remote &gt;&gt; The TV remote appears to be next to your plant.
+</tw-passagedata><tw-passagedata pid="21" name="Inspect desk" tags="" position="1024,637" size="100,100">&lt;img src=&quot;images/rooms/Bedroom_Desk.png&quot; alt=&quot;desk&quot; style= &quot;width:558px;height:376px;&quot; align=&quot;top&quot; /&gt;
+ 
+ There is a glowing light coming in from your window.There seems to be a drawer under the desk.&lt;&lt;if !$pickUpCup &gt;&gt;There is a clean water cup next to your plant.&lt;&lt;/if&gt;&gt;&lt;&lt;if !$remote &gt;&gt; The TV remote appears to be next to your plant.
 &lt;&lt;/if&gt;&gt;
 
 [[Look around]]
@@ -376,16 +381,17 @@ Seems locked.
 
 &lt;&lt;set $pickUpCup to &quot;true&quot;&gt;&gt;
 //Hopefully I can use this//
-[[Look around]]</tw-passagedata><tw-passagedata pid="23" name="Inspect hallway" tags="" position="2011.3333333333335,623" size="100,100">You see a painting.
+[[Look around]]</tw-passagedata><tw-passagedata pid="23" name="Inspect hallway" tags="" position="2011,623" size="100,100">You see a painting.
 
-[[Inspect painting]]</tw-passagedata><tw-passagedata pid="24" name="Inspect painting" tags="" position="1819.3333333333335,819" size="100,100">You look at the painting in front of you. It looks like your typical surrealist picture. It seems a bit crooked.
+[[Inspect painting]]</tw-passagedata><tw-passagedata pid="24" name="Inspect painting" tags="" position="1819,819" size="100,100">You look at the painting in front of you. It looks like your typical surrealist picture. It seems a bit crooked.
 
 You don&#39;t get a good feeling by looking at it.
 
 [[Readjust painting]]
 
 You [[turn-&gt;Walk down hall]] away.</tw-passagedata><tw-passagedata pid="25" name="Go into bathroom" tags="" position="2457,693" size="100,100">&lt;&lt;audio openDoor play&gt;&gt;
-
+&lt;&lt;audio waterFaucet stop&gt;&gt;
+&lt;img src=&quot;images/rooms/Bathroom_FullView.png&quot; alt=&quot;bathroom&quot; style= &quot;width:558px;height:376px;&quot; align=&quot;top&quot; /&gt;
 
 &#39;&#39;You walk into the bathroom and you see a familiar looking place. 
 
@@ -397,7 +403,7 @@ To your left you see a [[shower-&gt;Shower]].&#39;&#39;
 
 [[Walk down hall]] 
 
-</tw-passagedata><tw-passagedata pid="26" name="Inspect library door" tags="" position="1380.6666666666667,1104" size="100,100">You inspect the library door.
+</tw-passagedata><tw-passagedata pid="26" name="Inspect library door" tags="" position="1380,1104" size="100,100">You inspect the library door.
 
 [[Walk down hall]] 
 
@@ -422,6 +428,8 @@ The door is locked. Maybe there&#39;s a key somewhere.
 You open the door and enter the [[library-&gt;Library]].
 &lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="27" name="Shower" tags="" position="2768,1003" size="100,100">&lt;&lt;audio showerCurtain play&gt;&gt;
 
+&lt;img src=&quot;images/rooms/Bathroom_Shower.png&quot; alt=&quot;shower&quot; style= &quot;width:558px;height:376px;&quot; align=&quot;top&quot; /&gt;
+
 You open the shower curtain and you notice the shower is dry. It hasn&#39;t been used for a while.
 
 You notice something shiny by the drain.
@@ -429,7 +437,9 @@ You notice something shiny by the drain.
 You reach out to //[[inspect-&gt;Inspect]]// it.
 
 //Lots of great thoughts happened here
-</tw-passagedata><tw-passagedata pid="28" name="Inspect" tags="" position="2840,1198" size="100,100">You reach out and grab the shiny object.
+</tw-passagedata><tw-passagedata pid="28" name="Inspect" tags="" position="2840,1198" size="100,100">&lt;img src=&quot;images/rooms/Bathroom_Shower.png&quot; alt=&quot;shower&quot; style= &quot;width:558px;height:376px;&quot; align=&quot;top&quot; /&gt;
+
+You reach out and grab the shiny object.
 
 &#39;&#39;It&#39;s a metal chip in a star shape. There&#39;s a small crack in the middle.&#39;&#39;
 
@@ -439,6 +449,8 @@ You reach out to //[[inspect-&gt;Inspect]]// it.
 &quot;Hmm, I wonder what this is for.&quot;
 
 [[Look around bathroom-&gt;Go into bathroom]] </tw-passagedata><tw-passagedata pid="29" name="Sink" tags="" position="2057,1044" size="100,100">&lt;&lt;audio waterFaucet play&gt;&gt;
+
+&lt;img src=&quot;images/rooms/Bathroom_Sink.png&quot; alt=&quot;sink&quot; style= &quot;width:558px;height:376px;&quot; align=&quot;top&quot; /&gt;
 
 You turn on the faucet and wash your face.
 
@@ -451,11 +463,13 @@ You remember the plant in your room is about to die.
 &lt;!-- Tasks/State --&gt;
 
 &lt;&lt;if $pickUpCup &gt;&gt;
-[[Turn on water]]
+[[Pick up Cup]]
 &lt;&lt;else&gt;&gt;
 //I should grab some water for the plants//
 &lt;&lt;/if&gt;&gt;
-</tw-passagedata><tw-passagedata pid="30" name="Inspect Mirror" tags="" position="2287,1097" size="100,100"> You take a second to analyze the reflection. But you don&#39;t see yourself- instead you end up seeing the inside of your bedroom from the perspective of the window in your room.
+</tw-passagedata><tw-passagedata pid="30" name="Inspect Mirror" tags="" position="2287,1097" size="100,100">&lt;img src=&quot;images/rooms/Bathroom_Mirror.png&quot; alt=&quot;mirror&quot; style= &quot;width:558px;height:376px;&quot; align=&quot;top&quot; /&gt;
+
+You take a second to analyze the reflection. But you don&#39;t see yourself- instead you end up seeing the inside of your bedroom from the perspective of the window in your room.
 
 You look [[away-&gt;Go into bathroom]]. 
 
@@ -468,11 +482,16 @@ You look [[away-&gt;Go into bathroom]].
 //Has the light coming from the window in my room really just been the bathroom light this entire time?//
 &lt;!-- ------------INSERT TRIPPY MIRROR PICTURE HERE------------ --&gt;
 &lt;&lt;/if&gt;&gt;
-</tw-passagedata><tw-passagedata pid="31" name="Toilet" tags="" position="2437,1097" size="100,100">You look at the toilet.
+</tw-passagedata><tw-passagedata pid="31" name="Toilet" tags="" position="2437,1097" size="100,100">&lt;img src=&quot;images/rooms/Bathroom_Toilet.png&quot; alt=&quot;bedroom&quot; style= &quot;width:558px;height:376px;&quot; align=&quot;top&quot; /&gt;
+
+
+You look at the toilet.
 
 You look [[away-&gt;Go into bathroom]].
 
-//Seems like your ordinary toilet filled with germs//</tw-passagedata><tw-passagedata pid="32" name="Library" tags="" position="1380.6666666666667,1254" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="33" name="Fill it up" tags="" position="2047,1370" size="100,100">&lt;&lt;audio pouringWater play&gt;&gt;
+//Seems like your ordinary toilet filled with germs//</tw-passagedata><tw-passagedata pid="32" name="Library" tags="" position="1380,1254" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="33" name="Fill it up" tags="" position="2047,1370" size="100,100">&lt;&lt;audio pouringWater play&gt;&gt;
+
+&lt;img src=&quot;images/rooms/Bathroom_Sink.png&quot; alt=&quot;sink&quot; style= &quot;width:558px;height:376px;&quot; align=&quot;top&quot; /&gt;
 
 You fill up your cup with water to the brim of the glass. 
 
@@ -492,15 +511,16 @@ You fill up your cup with water to the brim of the glass.
 &lt;&lt;/if&gt;&gt;
 
 
-</tw-passagedata><tw-passagedata pid="34" name="Turn on water" tags="" position="2053,1205" size="100,100">&lt;&lt;audio waterFaucet stop&gt;&gt;
+</tw-passagedata><tw-passagedata pid="34" name="Pick up Cup" tags="" position="2053,1205" size="100,100">&lt;&lt;audio waterFaucet stop&gt;&gt;
 &lt;&lt;audio pickUpCup play&gt;&gt;
+&lt;img src=&quot;images/rooms/Bathroom_Sink.png&quot; alt=&quot;sink&quot; style= &quot;width:558px;height:376px;&quot; align=&quot;top&quot; /&gt;
 
 //Water is a basic necessity//
 
 [[Fill it up]] 
 
 
-</tw-passagedata><tw-passagedata pid="35" name="Inspect under desk drawer" tags="" position="1044.6666666666667,963.6666666666666" size="100,100">/*
+</tw-passagedata><tw-passagedata pid="35" name="Inspect under desk drawer" tags="" position="1044,963" size="100,100">/*
 (if: $flashlight is 0)[There is a flashlight in the drawer.]
 (if: $flashlight is &gt;= 1)[It is an empty drawer.]
 
@@ -521,7 +541,7 @@ It is an empty drawer.
 [[Take the flashlight]]
 &lt;&lt;/if&gt;&gt;
 
-[[Look around]]</tw-passagedata><tw-passagedata pid="36" name="Take the flashlight" tags="" position="934.6666666666666,1039" size="100,100">/*(set: $flashlight to 0)[[Look around]]
+[[Look around]]</tw-passagedata><tw-passagedata pid="36" name="Take the flashlight" tags="" position="934,1039" size="100,100">/*(set: $flashlight to 0)[[Look around]]
 (set: $flashlight to 1)*/
 
 
@@ -552,13 +572,16 @@ It is an empty drawer.
 //(set: $key2 to true)
 &lt;&lt;set $key2 = true&gt;&gt;
 
-[[Look around]]</tw-passagedata><tw-passagedata pid="39" name="Title Screen" tags="" position="181,32" size="100,100">&lt;&lt;audio titleMusic play&gt;&gt;
+[[Look around]]</tw-passagedata><tw-passagedata pid="39" name="Title Screen" tags="" position="349.33333333333337,28.666666666666668" size="100,100">&lt;&lt;audio titleMusic play&gt;&gt;
 
-&lt;img src=&quot;images/descent_title.png&quot; alt=&quot;titile screen&quot; height=&quot;327&quot; width=&quot;953&quot; /&gt;
+&lt;img src=&quot;images/descent_title.png&quot; style= &quot;width:953px;height:327px;&quot; align=&quot;middle&quot; /&gt;
 
-[[Wake up]] 
 
-</tw-passagedata><tw-passagedata pid="40" name="StoryInit" tags="" position="2318,165" size="100,100">&lt;&lt;cacheaudio &quot;titleMusic&quot; &quot;sounds/music/titlemusic.mp3&quot;&gt;&gt;
+
+
+&lt;a data-passage=&quot;Wake up&quot;&gt;
+&lt;img src=&quot;images/descent_wake_up_button.png&quot; alt=&quot;wake up&quot; style= &quot;width:123px;height:58px;&quot; align=&quot;middle&quot; /&gt;
+&lt;/a&gt;</tw-passagedata><tw-passagedata pid="40" name="StoryInit" tags="" position="2318,165" size="100,100">&lt;&lt;cacheaudio &quot;titleMusic&quot; &quot;sounds/music/titlemusic.mp3&quot;&gt;&gt;
 
 
 &lt;&lt;cacheaudio &quot;catMeow&quot; &quot;sounds/fx/catMeow.mp3&quot;&gt;&gt;
@@ -584,7 +607,7 @@ It is an empty drawer.
 &lt;&lt;else&gt;&gt;
 	Correct Password
 &lt;&lt;/if&gt;&gt;
-</tw-passagedata><tw-passagedata pid="42" name="Water plants" tags="" position="685.6666666666666,787" size="100,100">&#39;&#39;As you&#39;re watering the plants, you realize soon that this is a very realistic fake plant. The water is leaking out from the bottom so you should lift up the pot to clean up the leakage.&#39;&#39;
+</tw-passagedata><tw-passagedata pid="42" name="Water plants" tags="" position="685,787" size="100,100">&#39;&#39;As you&#39;re watering the plants, you realize soon that this is a very realistic fake plant. The water is leaking out from the bottom so you should lift up the pot to clean up the leakage.&#39;&#39;
 
 //This is a really good fake plant- I wonder if I can see where it&#39;s from.//
 
@@ -594,22 +617,24 @@ It is an empty drawer.
 
 &lt;&lt;set $waterPlants = true&gt;&gt;
 &lt;&lt;set $water = 0&gt;&gt;
-</tw-passagedata><tw-passagedata pid="43" name="Drink water" tags="" position="1813.6666666666665,1181.6666666666665" size="100,100">&#39;&#39;You guzzle the water and feel a bit better but it leaves a weird taste in your mouth.&#39;&#39;
+</tw-passagedata><tw-passagedata pid="43" name="Drink water" tags="" position="1813,1181" size="100,100">&#39;&#39;You guzzle the water and feel a bit better but it leaves a weird taste in your mouth.&#39;&#39;
 
 //This water sure tastes weird. I should get my water quality tested.//
 
 &lt;&lt;set $trip = true&gt;&gt;
 &lt;&lt;set $water = 0&gt;&gt;
 
-[[Walk down hall]] </tw-passagedata><tw-passagedata pid="44" name="Take remote" tags="" position="943,853.6666666666666" size="100,100">&lt;&lt;audio pickUpCup play&gt;&gt;
+[[Walk down hall]] </tw-passagedata><tw-passagedata pid="44" name="Take remote" tags="" position="943,853" size="100,100">&lt;img src=&quot;images/rooms/Bedroom_Remote.png&quot; alt=&quot;bedroom&quot; style= &quot;width:558px;height:376px;&quot; align=&quot;top&quot; /&gt;
+
+&lt;&lt;audio pickUpCup play&gt;&gt;
 
 &lt;&lt;set $remote to &quot;true&quot;&gt;&gt;
 //Maybe I can watch some TV//
-[[Look around]]</tw-passagedata><tw-passagedata pid="45" name="Look around bathroom" tags="" position="2620,1348" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="46" name="Inspect house plant" tags="" position="676.6666666666666,963.6666666666666" size="100,100">&#39;&#39;You lift up the plant and look at the bottom. All you see is the words &quot;Password&quot; written in black marker&#39;&#39;
+[[Look around]]</tw-passagedata><tw-passagedata pid="45" name="Look around bathroom" tags="" position="2620,1348" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="46" name="Inspect house plant" tags="" position="676,963" size="100,100">&#39;&#39;You lift up the plant and look at the bottom. All you see is the words &quot;Password&quot; written in black marker&#39;&#39;
 
 //Seems really cryptid, I want to see if I have any more of these fake plants around//
 
-[[Look around]]</tw-passagedata><tw-passagedata pid="47" name="Readjust painting" tags="" position="1819.3333333333335,969" size="100,100">&#39;&#39; While rearranging the painting, you decide to look on the back of it to make sure the hook is leveled. It has a message that says &quot;Drink the water&quot;.&#39;&#39;
+[[Look around]]</tw-passagedata><tw-passagedata pid="47" name="Readjust painting" tags="" position="1819,969" size="100,100">&#39;&#39; While rearranging the painting, you decide to look on the back of it to make sure the hook is leveled. It has a message that says &quot;Drink the water&quot;.&#39;&#39;
 
 &lt;&lt;if $water&gt;&gt;
 [[Drink water]] 
