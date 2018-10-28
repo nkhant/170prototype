@@ -121,7 +121,9 @@ var saveAs=saveAs||navigator.msSaveBlob&&navigator.msSaveBlob.bind(navigator)||f
 
 
 
+
 </style><script role="script" id="twine-user-script" type="text/twine-javascript">
+
 
 
 
@@ -166,7 +168,6 @@ var saveAs=saveAs||navigator.msSaveBlob&&navigator.msSaveBlob.bind(navigator)||f
 
 </tw-passagedata><tw-passagedata pid="3" name="Look around" tags="" position="631,156" size="100,100">&lt;&lt;audio tvStaticLoud stop&gt;&gt;
 
-&lt;img src=&quot;images/rooms/Bedroom_FullView.png&quot; alt=&quot;bedroom&quot; style= &quot;width:558px;height:376px;&quot; align=&quot;top&quot; /&gt;
 
 &#39;&#39;This room seems like a flipped version of the room in my dream. Almost all the furniture in my room was in the dream except for the TV and the cat.//It&#39;s strange how your mind builds dreams based off of your perception of reality//. On closer inspection of the room, you are drawn to the window- it is letting in a comforting light.//We all thrive off of sunshine//.&#39;&#39;
 
@@ -187,7 +188,9 @@ var saveAs=saveAs||navigator.msSaveBlob&&navigator.msSaveBlob.bind(navigator)||f
 
 &lt;&lt;if $trip&gt;&gt;
 //Something isn&#39;t right. The world is distorted. Everything is brighter and louder.//
+&lt;img src=&quot;images/rooms/Bedroom_FullView_crazy.png&quot; alt=&quot;bedroom&quot; style= &quot;width:558px;height:376px;&quot; align=&quot;top&quot; /&gt;
 &lt;&lt;else&gt;&gt;
+&lt;img src=&quot;images/rooms/Bedroom_FullView.png&quot; alt=&quot;bedroom&quot; style= &quot;width:558px;height:376px;&quot; align=&quot;top&quot; /&gt;
 //I&#39;m glad my room is comfortable but something feels strange.//
 &lt;&lt;/if&gt;&gt;
 
@@ -278,7 +281,7 @@ var saveAs=saveAs||navigator.msSaveBlob&&navigator.msSaveBlob.bind(navigator)||f
 [[Look around]] 
 //Maybe I can find a remote//
 &lt;&lt;/if&gt;&gt;
-</tw-passagedata><tw-passagedata pid="12" name="Look closer" tags="" position="81.66666666666666,897" size="100,100">&lt;img src=&quot;images/television/TV.png&quot; alt=&quot;tv&quot; style= &quot;width:294px;height:509x;&quot; align=&quot;top&quot; /&gt;
+</tw-passagedata><tw-passagedata pid="12" name="Look closer" tags="" position="81,897" size="100,100">&lt;img src=&quot;images/television/TV.png&quot; alt=&quot;tv&quot; style= &quot;width:294px;height:509x;&quot; align=&quot;top&quot; /&gt;
 
 &#39;&#39;You see static and finally a dialog box that is asking for a password. Where am I going to find this password?&#39;&#39;
 
@@ -452,7 +455,7 @@ You remember the plant in your room is about to die.
 &lt;&lt;else&gt;&gt;
 //I should grab some water for the plants//
 &lt;&lt;/if&gt;&gt;
-</tw-passagedata><tw-passagedata pid="28" name="Inspect Mirror" tags="" position="2287,1097" size="100,100">&lt;img src=&quot;images/rooms/Bathroom_Mirror.png&quot; alt=&quot;mirror&quot; style= &quot;width:558px;height:376px;&quot; align=&quot;top&quot; /&gt;
+</tw-passagedata><tw-passagedata pid="28" name="Inspect Mirror" tags="" position="2287,1097" size="100,100">
 
 You take a second to analyze the reflection. But you don&#39;t see yourself- instead you end up seeing the inside of your bedroom from the perspective of the window in your room.
 
@@ -465,7 +468,9 @@ You look [[away-&gt;Go into bathroom]].
 
 &lt;&lt;if $trip&gt;&gt;
 //Has the light coming from the window in my room really just been the bathroom light this entire time?//
-&lt;!-- ------------INSERT TRIPPY MIRROR PICTURE HERE------------ --&gt;
+&lt;img src=&quot;images/rooms/Bathroom_SinkToilet_crazy.png&quot; alt=&quot;bedroom&quot; style= &quot;width:558px;height:376px;&quot; align=&quot;top&quot; /&gt;
+&lt;&lt;else&gt;&gt;
+&lt;img src=&quot;images/rooms/Bathroom_Mirror.png&quot; alt=&quot;mirror&quot; style= &quot;width:558px;height:376px;&quot; align=&quot;top&quot; /&gt;
 &lt;&lt;/if&gt;&gt;
 </tw-passagedata><tw-passagedata pid="29" name="Toilet" tags="" position="2437,1097" size="100,100">&lt;img src=&quot;images/rooms/Bathroom_Toilet.png&quot; alt=&quot;bedroom&quot; style= &quot;width:558px;height:376px;&quot; align=&quot;top&quot; /&gt;
 
@@ -589,7 +594,7 @@ It is an empty drawer.
 &lt;&lt;cacheaudio &quot;waterFaucet&quot; &quot;sounds/fx/waterFaucet.mp3&quot;&gt;&gt;
 &lt;&lt;cacheaudio &quot;wateringPlant&quot; &quot;sounds/fx/wateringPlant.mp3&quot;&gt;&gt;
 
-</tw-passagedata><tw-passagedata pid="39" name="Password" tags="" position="80,1027.6666666666667" size="100,100">&lt;&lt;if $pwd isnot $sol&gt;&gt; 
+</tw-passagedata><tw-passagedata pid="39" name="Password" tags="" position="80,1027" size="100,100">&lt;&lt;if $pwd isnot $sol&gt;&gt; 
 	 Please enter password again.
 	 &lt;&lt;textbox &quot;$pwd&quot; &quot;&quot;&gt;&gt;
 	 &lt;&lt;button &quot;Enter&quot; &quot;Password&quot;&gt;&gt;  
@@ -651,6 +656,7 @@ It is an empty drawer.
 
 
 [[Walk down hall]] </tw-passagedata><tw-passagedata pid="46" name="Turn TV off" tags="" position="80,1150" size="100,100">&lt;INPUT THE IMAGE FOR TV TURNED OFF HERE AND THEN AN END CREDITS PAGE FOR THIS PROTOTYPE&gt;
+&lt;img src=&quot;images/television/tvOff.png&quot; alt=&quot;tv&quot; style= &quot;width:294px;height:509x;&quot; align=&quot;top&quot; /&gt;
 
 &#39;&#39;You turn the TV off. You snap back into reality and it seems like you were trapped living in a simulation of your own reality. Maybe we all are simulating our own realities everyday, I mean //who// really are we? How do you know which perspective you&#39;re living in? In that sense, aren&#39;t our dreams reality too?&#39;&#39;</tw-passagedata></tw-storydata></div>
 	<script id="script-sugarcube" type="text/javascript">
